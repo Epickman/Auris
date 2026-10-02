@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -620,6 +621,7 @@ body {
   }
 
   function drawFrame(ctx, el, frames, rawIdx){
+    if(!frames || !frames.length) return;
     const i   = Math.max(0, Math.min(frames.length-1, Math.round(rawIdx)));
     const img = frames[i];
     if(!img || !img.complete || !img.naturalWidth) return;
